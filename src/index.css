@@ -1,0 +1,18 @@
+@import "tailwindcss";
+#map {
+  height: 180px;
+}
+.label {
+  @apply uppercase text-gray-400 text-xs tracking-[2px];
+}
+.value {
+  @apply font-bold text-xl md:w-40;
+}
+
+.flex-item {
+  @apply flex flex-col items-center md:items-baseline justify-center mb-auto;
+}
+
+.separator {
+  @apply h-full w-[1px] opacity-40 bg-gray-600 hidden md:block;
+}
