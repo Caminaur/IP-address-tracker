@@ -1,4 +1,6 @@
+@import url("https://fonts.googleapis.com/css2?family=Rubik:wght@400;500;700&display=swap");
 @import "tailwindcss";
+
 #map {
   height: 180px;
 }
@@ -15,4 +17,15 @@
 
 .separator {
   @apply h-full w-[1px] opacity-40 bg-gray-600 hidden md:block;
+}
+
+@theme {
+  --layout-mobile: 375px;
+  --layout-desktop: 1440px;
+
+  --color-very-dark-gray: hsl(0, 0%, 17%);
+  --color-dark-gray: hsl(0, 0%, 59%);
+
+  --font-body: "Rubik", sans-serif;
+  --font-size-input: 18px;
 }

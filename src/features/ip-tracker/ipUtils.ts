@@ -29,3 +29,11 @@ export const isPublicIP = (ip: string): boolean => {
 
   return !isPrivate && !isReserved;
 };
+
+export const normalizeIP = (input: string): string => {
+  const parts = input.split(".");
+
+  const cleaned = parts.map((part) => String(parseInt(part, 10)));
+
+  return cleaned.join(".");
+};
