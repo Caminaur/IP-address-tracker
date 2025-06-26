@@ -19,14 +19,14 @@ export interface IpDataInterface {
 
 function App() {
   const [position, setPosition] = useState<[number, number]>([
-    40.4168, -3.7038,
+    33.44838, -112.07404,
   ]);
   const mapRef = useRef<LeafletMap>(null);
 
   const [ipData, setIpData] = useState<IpDataInterface>({
-    ipAddress: "192.212.174.101",
-    location: "Brooklyn, NY 10001",
-    timeZone: "UTC-05:00",
+    ipAddress: "98.97.116.0",
+    location: "Phoenix, Arizona 85001",
+    timeZone: "UTC-07:00",
     isp: "SpaceX Starlink",
   });
 
@@ -34,21 +34,23 @@ function App() {
     useIPSearch(setPosition, setIpData, mapRef);
 
   return (
-    <div className="h-screen flex flex-col items-center overflow-hidden justify-center">
+    <div className="h-screen flex flex-col items-center overflow-hidden justify-center relative">
       <div className="w-full h-screen z-10">
         <picture>
           <source media="(min-width:768px)" srcSet={patternDesktop} />
           <img
-            className="w-full h-1/2 object-cover"
+            className="w-full h-1/3 object-cover"
             src={patternMobile}
             alt=""
           />
         </picture>
 
-        <MapView position={position} ipData={ipData} mapRef={mapRef} />
+        <div className="h-2/3 ">
+          <MapView position={position} ipData={ipData} mapRef={mapRef} />
+        </div>
       </div>
 
-      <div className="absolute h-screen w-full flex flex-col items-center z-20 gap-6 p-6 pointer-events-none">
+      <div className="absolute h-screen w-full flex flex-col items-center z-20 gap-10 p-8 pointer-events-none shadow-2xs">
         <h1 className="text-center font-bold text-2xl text-white">
           IP Address Tracker
         </h1>
