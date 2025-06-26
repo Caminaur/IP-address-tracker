@@ -8,11 +8,11 @@
   @apply uppercase text-gray-400 text-xs tracking-[2px];
 }
 .value {
-  @apply font-bold text-xl md:w-40;
+  @apply font-bold text-xl md:w-40 text-center md:text-left;
 }
 
 .flex-item {
-  @apply flex flex-col items-center md:items-baseline justify-center mb-auto;
+  @apply flex flex-col items-center md:items-baseline justify-center mb-auto gap-2;
 }
 
 .separator {

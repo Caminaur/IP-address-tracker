@@ -6,7 +6,7 @@ interface InfoCardProps {
 
 function InfoCard({ ipData }: InfoCardProps) {
   return (
-    <div className="bg-white w-full rounded-2xl py-6 px-4 flex flex-col justify-center items-center gap-6 md:flex-row md:justify-between md:px-8 lg:max-w-280 md:gap-0 md:items-stretch">
+    <div className="bg-white w-full rounded-2xl py-6 px-4 flex flex-col justify-center  items-center gap-6 md:flex-row md:justify-between md:px-8 max-w-100 md:max-w-280 lg:max-w-280 md:gap-0 md:items-stretch lg:py-8 shadow-2xl lg:mt-4">
       <div className="flex-item">
         <span className="label">IP Adress</span>
         <span className="value">{ipData.ipAddress}</span>
