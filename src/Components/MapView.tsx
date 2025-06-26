@@ -1,5 +1,13 @@
 import React, { useEffect } from "react";
-import { MapContainer, TileLayer, Marker, Popup, useMap } from "react-leaflet";
+import "./MapView.css";
+import {
+  MapContainer,
+  TileLayer,
+  Marker,
+  Popup,
+  useMap,
+  ZoomControl,
+} from "react-leaflet";
 import { Map as LeafletMap, type LatLngExpression } from "leaflet";
 import "leaflet/dist/leaflet.css";
 import L from "leaflet";
@@ -14,7 +22,7 @@ export interface IpDataInterface {
 }
 const customIcon = new L.Icon({
   iconUrl: iconLocation,
-  iconSize: [40, 60],
+  iconSize: [40, 50],
   iconAnchor: [20, 70],
 });
 
@@ -38,7 +46,12 @@ export function MapEffect({ position }: { position: LatLngExpression }) {
 
 function MapView({ position, ipData }: MapViewProps) {
   return (
-    <MapContainer center={position} zoom={13} style={{ height: "60%" }}>
+    <MapContainer
+      center={position}
+      zoom={15}
+      style={{ height: "100%" }}
+      zoomControl={false}
+    >
       <TileLayer
         url="https://{s}.tile.openstreetmap.org/{z}/{x}/{y}.png"
         attribution="&copy; OpenStreetMap contributors"
@@ -47,6 +60,7 @@ function MapView({ position, ipData }: MapViewProps) {
         <Popup>{ipData.ipAddress}</Popup>
       </Marker>
       <MapEffect position={position} />
+      <ZoomControl position="bottomleft" />
     </MapContainer>
   );
 }
