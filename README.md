@@ -31,32 +31,35 @@ Users should be able to:
 
 #### Desktop
 
-<img src='./src/assets/Desktop.png' width='700px' style='border-radius:8px;'/>
+<img src='./src/assets/screenshots/Desktop.png' width='700px' style='border-radius:8px;'/>
 
 #### Mobile
 
-<img src='./src/assets/Mobile.png' width='325px' style='border-radius:8px;'/>
+<img src='./src/assets/screenshots/Mobile.png' width='325px' style='border-radius:8px;'/>
 
 ### Links
 
 - Live Site URL: [Live site](url)
-- Solution URL: [Github](https://github.com/Caminaur/)
+- Solution URL: [Github](https://github.com/Caminaur/IP-address-tracker)
+
+## My Process
+
+This was a great challenge to experiment with React custom hooks and get more comfortable with TypeScript.
 
 ### Built with
 
-- Semantic HTML5 markup
-- CSS custom properties
 - Mobile-first workflow
-- [React](https://reactjs.org/) (or other tech used)
+- [React](https://reactjs.org/)
 - [Tailwind](https://tailwindcss.com/)
+- [TypeScript](https://www.typescriptlang.org/docs/handbook/intro.html)
 
 ### Continued development
 
-_Describe what you want to improve on in future projects._
+I would like to improve my planning so I could create better and more organize projects from the get-go
 
 ### Useful resources
 
-- [Example Resource](https://www.example.com) - Explanation of why this was useful.
+- [Custom Hooks in React (Design Patterns)](https://www.youtube.com/watch?v=I2Bgi0Qcdvc) - This video helped me to understand how to properly use custom hooks while following good design patterns.
 
 ## Author
 
