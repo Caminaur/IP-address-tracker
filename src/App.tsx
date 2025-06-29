@@ -9,6 +9,7 @@ import { Map as LeafletMap } from "leaflet";
 import MapView from "./Components/MapView";
 import InfoCard from "./Components/InfoCard";
 import { useIPSearch } from "./hooks/useApiSearch";
+import Attribution from "./Components/Attribution";
 
 export interface IpDataInterface {
   ipAddress: string;
@@ -51,7 +52,7 @@ function App() {
       </div>
 
       <div className="absolute h-screen w-full flex flex-col items-center z-20 gap-10 p-8 pointer-events-none shadow-2xs">
-        <h1 className="text-center font-bold text-2xl text-white">
+        <h1 className="text-center font-bold text-2xl text-white ">
           IP Address Tracker
         </h1>
         <InputIPSearch
@@ -62,6 +63,7 @@ function App() {
         />
         <InfoCard ipData={ipData} />
       </div>
+      <Attribution theme="1" />
     </div>
   );
 }

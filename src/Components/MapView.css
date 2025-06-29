@@ -3,3 +3,17 @@
   height: 50px !important;
   line-height: 50px !important;
 }
+
+.leaflet-bottom.leaflet-left {
+  bottom: 2.5rem;
+}
+
+.attribution-shadow {
+  box-shadow: 0 5px 10px #00000083;
+}
+
+@media (min-width: 450px) {
+  .leaflet-bottom.leaflet-left {
+    bottom: 0;
+  }
+}
