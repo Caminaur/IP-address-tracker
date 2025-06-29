@@ -10,6 +10,7 @@ import MapView from "./Components/MapView";
 import InfoCard from "./Components/InfoCard";
 import { useIPSearch } from "./hooks/useApiSearch";
 import Attribution from "./Components/Attribution";
+import { useInitialIpLoad } from "./hooks/useInitialIPLoad";
 
 export interface IpDataInterface {
   ipAddress: string;
@@ -33,7 +34,7 @@ function App() {
 
   const { inputValue, errorValue, handleDataEntry, handleSearchEvent } =
     useIPSearch(setPosition, setIpData, mapRef);
-
+  useInitialIpLoad(setPosition, setIpData, mapRef);
   return (
     <div className="h-screen flex flex-col items-center overflow-hidden justify-center relative">
       <div className="w-full h-screen z-10">
