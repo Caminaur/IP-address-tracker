@@ -34,6 +34,7 @@ function InputIPSearch({
           className="bg-black p-5 cursor-pointer pointer-events-auto transition-colors duration-300 hover:bg-very-dark-gray"
           type="button"
           onClick={handleSearchEvent}
+          aria-label="Search"
         >
           <img src={arrowIcon} alt="" />
         </button>

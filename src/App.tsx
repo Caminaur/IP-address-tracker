@@ -1,5 +1,3 @@
-import "./App.css";
-
 import patternDesktop from "./assets/images/pattern-bg-desktop.png";
 import patternMobile from "./assets/images/pattern-bg-mobile.png";
 import { useRef, useState } from "react";
@@ -36,7 +34,7 @@ function App() {
     useIPSearch(setPosition, setIpData, mapRef);
   useInitialIpLoad(setPosition, setIpData, mapRef);
   return (
-    <div className="h-screen flex flex-col items-center overflow-hidden justify-center relative">
+    <main className="h-screen flex flex-col items-center overflow-hidden justify-center relative">
       <div className="w-full h-screen z-10">
         <picture>
           <source media="(min-width:768px)" srcSet={patternDesktop} />
@@ -65,7 +63,7 @@ function App() {
         <InfoCard ipData={ipData} />
       </div>
       <Attribution theme="1" />
-    </div>
+    </main>
   );
 }
 

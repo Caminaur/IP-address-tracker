@@ -28,4 +28,8 @@
 
   --font-body: "Rubik", sans-serif;
   --font-size-input: 18px;
+  --font-family-sans: var(--font-body); /* Makes 'font-sans' use Rubik */
+}
+body {
+  font-family: var(--font-body);
 }
